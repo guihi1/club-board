@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href=".src/stylesheets/output.css" rel="stylesheet">
+  <title></title>
+  <link href="../src/stylesheets/output.css" rel="stylesheet">
 </head>
+
 <body>
-  <h1>teste</h1>
+  <h1>
+    <%= locals.title %>
+  </h1>
+  <% if (locals.title==="Sign Up" ) { %>
+    <form class="" action="/sign-up" method="POST">
+      <div class="">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name">
+      </div>
+      <div class="">
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name">
+      </div>
+      <div class="">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username">
+      </div>
+      <div class="">
+        <label for="pw">Password</label>
+        <input type="password" id="pw" name="password">
+      </div>
+      <button>Sign Up</button>
+    </form>
+    <% } else { %>
+      <form class="" action="/sign-in" method="POST">
+        <div class="">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username">
+        </div>
+        <div class="">
+          <label for="pw">Password</label>
+          <input type="password" id="pw" name="password">
+        </div>
+        <button>Sign In</button>
+
+      </form>
+      <% } %>
 </body>
+
 </html>
