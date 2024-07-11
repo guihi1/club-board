@@ -1,13 +1,17 @@
 import express from 'express';
+import * as userController from '../controllers/userController';
 
 const userRouter = express.Router();
 
-userRouter.get('/sign-up', (req, res) => {
-  res.send('Sign up not implemented yet');
-});
+// GET request to sign up
+userRouter.get('/sign-up', userController.signUp);
+
+// POST request to create a user
+userRouter.post('/sign-up', userController.signUpPost);
 
 userRouter.get('/:username');
 
-userRouter.get('/sign-in');
+// GET request to sign in
+userRouter.get('/sign-in', userController.signIn);
 
 export default userRouter;
