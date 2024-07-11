@@ -13,14 +13,14 @@
     <%= locals.title %>
   </h1>
   <% if (locals.title==="Sign Up" ) { %>
-    <form class="" action="/sign-up" method="POST">
+    <form class="" action="" method="POST">
       <div class="">
-        <label for="first-name">First Name</label>
-        <input type="text" id="first-name" name="first-name">
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name" name="fname">
       </div>
       <div class="">
-        <label for="last-name">Last Name</label>
-        <input type="text" id="last-name" name="last-name">
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" name="lname">
       </div>
       <div class="">
         <label for="username">Username</label>
@@ -30,10 +30,10 @@
         <label for="pw">Password</label>
         <input type="password" id="pw" name="password">
       </div>
-      <button>Sign Up</button>
+      <button type="submit">Sign Up</button>
     </form>
     <% } else { %>
-      <form class="" action="/sign-in" method="POST">
+      <form class="" action="" method="POST">
         <div class="">
           <label for="username">Username</label>
           <input type="text" id="username" name="username">
@@ -42,7 +42,7 @@
           <label for="pw">Password</label>
           <input type="password" id="pw" name="password">
         </div>
-        <button>Sign In</button>
+        <button type="submit">Sign In</button>
 
       </form>
       <% } %>
